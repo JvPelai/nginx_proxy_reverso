@@ -5,7 +5,6 @@ services:
     build:
       context: app
     container_name: app
-
     networks:
       - node-network
     volumes:
@@ -40,7 +39,7 @@ services:
     ports:
       - "8080:80"
     depends_on:
-      - server
+      - app
 
 networks:
   node-network:
