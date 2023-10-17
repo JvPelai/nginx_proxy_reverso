@@ -5,6 +5,7 @@ services:
     build:
       context: app
     container_name: app
+    command: bash -c "npm install && node index.js"
     networks:
       - node-network
     volumes:
